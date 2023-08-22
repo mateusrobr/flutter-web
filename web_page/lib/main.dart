@@ -9,18 +9,13 @@ class MyApp extends StatelessWidget{
   Widget build(BuildContext context){
     return MaterialApp.router(
       theme: ThemeData.dark(),
-      routeInformationParser: routes.routeInformationParser,
-      routeInformationProvider: routes.routeInformationProvider,
-      routerDelegate: routes.routerDelegate,
+      routerConfig: routes,
     );
   }
 }
 
 
 void main(){
-  buttonTeste.entries.forEach((element) {
-    print(element.key);
-    print(element.value.runtimeType);
-  });
+  
   runApp(MyApp());
 }
