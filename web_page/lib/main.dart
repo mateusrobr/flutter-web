@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:web_page/routes.dart';
+import 'package:flutter_web_plugins/url_strategy.dart';
 
 
 class MyApp extends StatelessWidget{
@@ -15,7 +16,8 @@ class MyApp extends StatelessWidget{
 }
 
 
-void main(){
+void main(){ 
+  usePathUrlStrategy();
   
   runApp(MyApp());
 }
