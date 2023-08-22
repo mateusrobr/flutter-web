@@ -13,12 +13,12 @@ final linkList = [
   "Teste 3",
 ];
 
-final Map<dynamic,Widget>buttonTeste = {
- "doneprojects" : DoneProjects(),
- "getintouch" : GetInTouch(),
- "description" : SkillDescription(),
- "academicinformation" : AcademicInformation(),
- "selfdescription" : SelfDescription()
+final Map<dynamic,dynamic>buttonTeste = {
+ "doneprojects" : "Done Projects",
+ "getintouch" : "Get in Touch",
+ "description" : "Description",
+ "academicinformation" : "Academic Information",
+ "selfdescription" : "Self Description"
 };
 
 final routes = GoRouter(

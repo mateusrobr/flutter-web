@@ -9,7 +9,7 @@ class HomeScreen extends StatelessWidget{
     super.key,
     required this.buttonTextLink});
 
-  final Map<dynamic,Widget>buttonTextLink;
+  final Map<dynamic,dynamic>buttonTextLink;
 
   @override
   Widget build(BuildContext context){
@@ -40,7 +40,7 @@ class HomeScreen extends StatelessWidget{
                         child: ElevatedButton(
                           onPressed: () => context.push('/${element.key}'), 
                           child: Text(
-                            element.key
+                            element.value
                           )),
                       ),
                     ),
