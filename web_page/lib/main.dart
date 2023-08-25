@@ -8,16 +8,19 @@ class MyApp extends StatelessWidget{
 
   @override
   Widget build(BuildContext context){
+    
     return MaterialApp.router(
       theme: ThemeData.dark(),
-      routerConfig: routes,
+      routerDelegate: routes.routerDelegate,
+      routeInformationParser: routes.routeInformationParser,
+      routeInformationProvider: routes.routeInformationProvider,
     );
   }
 }
 
 
 void main(){ 
-  usePathUrlStrategy();
-  
+
+  setUrlStrategy(PathUrlStrategy());
   runApp(MyApp());
 }
