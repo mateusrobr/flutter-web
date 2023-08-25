@@ -15,6 +15,16 @@ class HomeScreen extends StatelessWidget{
   Widget build(BuildContext context){
     return Scaffold(
       appBar: AppBar(
+        actions: buttonTextLink.entries.map((element) {
+                    return Padding(
+                      padding: const EdgeInsets.all(2.0),
+                        child: ElevatedButton(
+                          onPressed: () => GoRouter.of(context).go("/${element.key}"), 
+                          child: Text(
+                            element.value
+                          )),
+                    );
+                }).toList(),
         title: Text(
           "Meu Portifolio",
           style: TextStyle(
@@ -23,31 +33,8 @@ class HomeScreen extends StatelessWidget{
           ),
           )
           ),
-          body: Center(
-            child: SizedBox(             
-              height: MediaQuery.of(context).size.height * 0.7,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: buttonTextLink.entries.map((element) {
-                  return Expanded(
-                    flex: 2,
-                    child: Padding(
-                      padding: const EdgeInsets.all(2.0),
-                      child: SizedBox(
-                        height: MediaQuery.of(context).size.height * 0.12,
-                        width: 100,
-                        child: ElevatedButton(
-                          onPressed: () => context.push('/${element.key}'), 
-                          child: Text(
-                            element.value
-                          )),
-                      ),
-                    ),
-                  );
-                }).toList(),
-              ),
-            ),
+          body: Container(
+            color: Colors.white,
           ),
     );
   }
