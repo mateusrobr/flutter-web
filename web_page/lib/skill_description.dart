@@ -1,21 +1,14 @@
 import 'package:flutter/material.dart';
 
 
-class SkillDescription extends StatelessWidget{
-  SkillDescription({super.key});
-
-  @override
-  Widget build(BuildContext context){
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          "Descrição das Habilidades",
-          style: TextStyle(
-            fontSize: 24,
-            fontWeight: FontWeight.bold
-          ),
-        ),
-      ),
+class WhiteContainer{
+  Widget getWhiteContainer(BuildContext context, Widget ? conxtetWidget){
+    Size size = MediaQuery.of(context).size;
+    return  Container(
+      height: size.height,
+      width: size.width,
+        color: Colors.white,
+        child: conxtetWidget!,
     );
   }
 }
