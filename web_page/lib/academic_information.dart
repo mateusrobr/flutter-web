@@ -8,6 +8,7 @@ class AcademicInformation extends StatelessWidget{
 
   @override
   Widget build(BuildContext context){
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -18,13 +19,18 @@ class AcademicInformation extends StatelessWidget{
           ),
         ),
       ),
-      body: Container(
-        child: Text(
-              academicInformation,
-              style: TextStyle(
-                fontSize: 17,
+      body: SizedBox(
+        height: size.height,
+        width: size.width,
+        child: Container(
+          color: Colors.white,
+          child: Text(
+                academicInformation,
+                style: TextStyle(
+                  fontSize: 17,
+                ),
               ),
-            ),
+        ),
       ),
     );
   }
