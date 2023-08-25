@@ -1,29 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:web_page/white_container.dart';
 
 
-class SelfDescription extends StatelessWidget{
-  SelfDescription({super.key});
+class SkillDescription extends StatelessWidget{
+  SkillDescription({super.key});
 
-
-  final selfDescription = "Desenvolvedor Back-End com conhecimentos em Java, C++, Python, Github, Maven, Spoon-Core, Sqlite";
   @override
   Widget build(BuildContext context){
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Sobre",
+          "Descrição das Habilidades",
           style: TextStyle(
             fontSize: 24,
             fontWeight: FontWeight.bold
           ),
         ),
       ),
-      body: Container(
-        child: Text(
-          selfDescription,
-          style: TextStyle(
-            fontSize: 20
-          ),)),
+      body: WhiteContainer().getWhiteContainer(context, null)
     );
   }
 }
