@@ -13,6 +13,7 @@ class HomeScreen extends StatelessWidget{
 
   @override
   Widget build(BuildContext context){
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
         actions: buttonTextLink.entries.map((element) {
@@ -33,9 +34,26 @@ class HomeScreen extends StatelessWidget{
           ),
           )
           ),
-          body: Container(
-            color: Colors.white,
-          ),
+          body: Column(
+            children: [
+              Container(
+                height: size.height * 0.50,
+                width: size.width,
+                color: Color.fromARGB(255, 6, 30, 241),
+                child: Column(
+                ),
+              ),
+              Container(
+                height: size.height * 0.30,
+                width: size.width,
+                color: Color.fromARGB(255, 66, 206, 1),
+              ),
+Container(
+                height: size.height * 0.10,
+                width: size.width,
+                color: Color.fromARGB(255, 255, 255, 255),
+              )
+          ],)
     );
   }
 }

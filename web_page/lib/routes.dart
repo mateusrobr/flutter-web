@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:web_page/academic_information.dart';
 import 'package:web_page/self_description.dart';
-import 'package:web_page/skill_description.dart';
 import 'HomeScreen.dart';
 import 'DoneProjects.dart';
 import 'GetInTouch.dart';
@@ -18,7 +17,6 @@ final Map<dynamic,dynamic>buttonTeste = {
  "getintouch" : "Get in Touch",
  "description" : "Description",
  "academicinformation" : "Academic Information",
- "selfdescription" : "Self Description"
 };
 
 final routes = GoRouter(
@@ -44,11 +42,6 @@ final routes = GoRouter(
     path: '/academicinformation',
     pageBuilder: (context, state) => MaterialPage(child: AcademicInformation()),
     ),
-  GoRoute(
-    path: '/selfdescription',
-    pageBuilder: (context, state) => MaterialPage(child: SelfDescription()),
-    )
-
 ]
 );
 
